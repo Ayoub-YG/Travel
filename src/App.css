@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;600;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --gradientColor : linear-gradient(to right , hsl(187, 85% , 43%) , hsl(199, 100%,33%));
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  list-style: none;
+}
+section{
+  padding: 0rem  0 2rem;
+}
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+.flex{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.grid{
+  display: grid;
+  align-items: center;
+}
+.btn {
+  padding: .6rem 1.6rem;
+  background:linear-gradient(to right , hsl(187, 85% , 43%) , hsl(199, 89%, 49%));
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn a {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
 }
+.btn :hover {
+ color: rgb(203, 193, 193);
+}
+.logo {
+  color: rgb(65, 65, 241);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+img , video {
+  width: 100%;
+  height: auto;
+}
+input {
+  font-size: 100%;
+}
+body{
+  background-color: rgb(245, 250, 255);
+}
+/* this defualt styling */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width:1240px){
+  .container{
+    width: 80% !important;
+    margin: auto !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section{
+    padding: 6rem 0 4rem;
   }
+}
+@media screen and (min-width:2560px){
+   body{
+     zoom: 1.7;
+   }
 }

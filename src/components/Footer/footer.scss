@@ -1,0 +1,265 @@
+.footer{
+    width: 100%;
+    position: relative;
+    padding: 1rem 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .videoDiv{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        video{
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            // background: rgb(51, 88, 223);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            mix-blend-mode: multiply;
+        }
+    }
+
+    .secContent{
+        width: 100%;
+        height: max-content;
+        padding: 2rem initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        row-gap: 2rem;
+        z-index: 100;
+
+        .contactDiv{
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 1rem;
+
+            .text{
+                cursor: pointer;
+                small{
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: white;
+                }
+
+                h2{
+                    color: white;
+                    font-size: 1.8rem;
+                }
+            }
+
+            .inputDiv{
+                width: 100%;
+                gap: 1rem;
+                flex-direction: column;
+
+                input{
+                    width: 100%;
+                    padding: .5rem .6rem;
+                    border-radius: 3rem;
+                    border: 1px solid white;
+                    outline: none;
+                    background: transparent;
+                    color: white;
+
+                    &::placeholder{
+                        color: white;
+                        opacity: .5;
+                    }
+                }
+            }
+
+            .btn{
+                width: 100%;
+                justify-content: center;
+                color: white;
+                font-weight: 500;
+                gap: .5rem;
+                cursor: pointer;
+
+                .icon{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .footerCard{
+            position: relative;
+            padding: 1rem 1rem 4rem;
+            gap: 2rem;
+            border-radius: 1rem;
+            background-color: aliceblue;
+            width: 95%;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow: hidden;
+            
+
+            .footerInfo{
+                flex-basis: 50%;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                row-gap: .5rem;
+            }
+
+            .logoDiv{
+                .logo{
+                    color: black;
+                    font-weight: 600;
+
+                    .icon{
+                        font-size: 25px;
+                        color: rgb(188, 184, 184);
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .footerPragarph{
+                font-size: 13px;
+                color:rgb(188, 184, 184);
+            }
+
+            .footerSocails{
+                column-gap: 1rem;
+                margin-top:  1.5rem;
+
+                .icon{
+                    color: black;
+                    font-size: 20px;
+                    margin: 0 0.2rem;
+                    &:hover{
+                        color: rgb(72, 70, 70);
+                    }
+                }
+            }
+
+            .footerLinks{
+                flex-basis: 50%;
+                width: 100%;
+                gap: 1rem;
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: space-between;
+                
+
+                .linkGroup{
+                    .groupTitle{
+                        display: block;
+                        font-weight: 600;
+                        color: black;
+                        margin-bottom: .5rem;
+                    }
+
+                    .footerList{
+                        font-size: 16px;
+                        color:rgb(188, 184, 184); 
+                        transition: .3s ease-in-out;
+                        cursor: pointer;
+
+                        .icon{
+                            font-size: 25px;
+                            color: gray;
+                        }
+                        &:hover{
+                            color: rgba(15, 10, 10, 0.473);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:500px) {
+    .footer {
+        .secContent{
+            .footerCard{
+                .footerLinks{
+                    grid-template-columns: repeat(3,1fr);
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:680px){
+    .secContent{
+        flex-direction: row;
+        justify-content: space-between;
+
+        .inputDiv{
+            width: max-content;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            input{
+                width: 60%;
+            }
+
+            .btn{
+                width: max-content;
+            }
+        }
+    }
+}
+@media screen and (min-width:840px){
+    .footer{
+        padding: 5rem 0;
+        .secContent{
+            .footerCard{
+                flex-direction: row;
+
+                .footerLinks{
+                    grid-template-columns:repeat(3,1fr);
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (min-width:1024px){
+    .footer{
+        .secContent{
+            .footerCard{
+                padding: 3rem 1rem;
+
+                .footerInfo{
+                    .footerPragarph{
+                        font-size: 15px;
+                    }
+
+                    .footerSocails{
+                        column-gap: .5rem;
+                        .icon{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+            .footerLinks{
+                .linkGroup{
+                    .footerList{
+                        font-size: 16px;
+                        padding: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+}

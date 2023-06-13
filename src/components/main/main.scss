@@ -1,0 +1,163 @@
+.main{
+    width: 100;
+
+    .secTitle{
+        .title{
+            position: relative;
+            width: max-content;
+            color: rgb(37, 36, 36);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after{
+                position: absolute;
+                content: '';
+                height: 1px;
+                width: 170px;
+                right: 0;
+                bottom: 0;
+                z-index: -3;
+            }
+        }
+    }
+
+    .secContent{
+        justify-content: center;
+        gap: 1.5rem;
+
+        .singleCard{
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background: rgb(255, 254, 254);
+            box-shadow: 0 2px 4px #cec7c7a4;
+            overflow: hidden;
+
+            &:hover{
+                background: rgb(236, 233, 233);  
+                box-shadow: 0 2px 4px #3b3636a4;
+            }
+
+            .imgDiv{
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 2s ease;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 2s ;
+                }
+            }
+
+            .cardInfo{
+                padding: 1rem;
+
+                .desTitle{
+                    color: black;
+                    font-size: 1.25rem;
+                }
+
+                .conteint{
+                    gap: .5rem;
+
+                    .icon{
+                        color: rgba(109, 107, 107, 0.801);
+                        font-size: 18px;
+                    }
+
+                    .name{
+                        color: rgba(109, 107, 107, 0.801);
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+
+                .fees{
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-top: 1px solid rgb(162, 160, 160) ;
+                    border-bottom: 1px solid rgb(162, 160, 160)  ;
+
+                    .grade{
+                       color: rgba(109, 107, 107, 0.801);
+                       max-width: 100px;
+                       line-height: 20px;
+                       display: flex;
+                       align-items: center;
+                       justify-content: center;
+
+                       small{
+                          text-align: center;
+                          background: rgb(22, 172, 202);
+                          border-radius: 1rem;
+                          padding: 1px 10px ;
+                          font-size: 11px;
+                          color: white;
+                       }
+                    }
+
+                    .price{
+                        font-size: 2rem;
+                        color: black;
+                    }
+                }
+
+                .description{
+                    font-size: 13.5px;
+                    color: rgba(109, 107, 107, 0.801);
+                    font-weight: 500;
+                }
+
+                .btn{
+                    margin-top: 1rem;
+                    color: white;
+                    font-weight: 600;
+                    justify-content: space-between;
+                    gap: .5rem;
+
+                    .icon{
+                        align-items: center;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:500px){
+    .title{
+        font-size: 1.5rem;
+        &::after{
+            width: 155px !important;
+        }
+    }
+
+    .secContent{
+        grid-template-columns: repeat(2,1fr);
+
+        .singleCard{
+            height: auto;
+        }
+    }
+}
+
+@media screen and (min-width:680px){
+    .secContent{
+        grid-template-columns: repeat(3,1fr);
+
+        .singleCard{
+            height: auto;
+        }
+    }
+}
